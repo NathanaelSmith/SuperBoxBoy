@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<title>CREATIVE3</title>
+<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="mystyle.css">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<head>
+</head>
+
+<body>
+<div class="Header">
+<p>SUPER BOX BOY</p>
+<div class="hand"></div>
+<div class="boxBoy">
+<div class= "eye"></div>
+<div class= "eye"></div>
+</div>
+<div class="hand"></div>
+<div class="boxBoyGirl">
+<div class= "eye"></div>
+<div class= "eye"></div>
+</div>
+<div class="hand"></div>
+</div>
+
+
+
+<div id="game">
+<div id="arrowKeys">
+<p>Level: {{boxgirl}}</p>
+	<div class="screen">
+  <i id="s0" class="fas fa-square" v-bind:style="{ color: colors00 }"></i>
+  <i id="s10" class="fas fa-square" v-bind:style="{ color: colors10 }"></i>
+  <i id="s20" class="fas fa-square" v-bind:style="{ color: colors20 }"></i>
+  <i id="s30" class="fas fa-square" v-bind:style="{ color: colors30 }"></i>
+  <i id="s40" class="fas fa-square" v-bind:style="{ color: colors40 }"></i>
+  <i id="s50" class="fas fa-square" v-bind:style="{ color: colors50 }"></i>
+
+ <br>
+  <i id="s01" class="fas fa-square" v-bind:style="{ color: colors01 }"></i>
+  <i id="s11" class="fas fa-square" v-bind:style="{ color: colors11 }"></i>
+  <i id="s21" class="fas fa-square" v-bind:style="{ color: colors21 }"></i>
+  <i id="s31" class="fas fa-square" v-bind:style="{ color: colors31 }"></i>
+  <i id="s41" class="fas fa-square" v-bind:style="{ color: colors41 }"></i>
+  <i id="s51" class="fas fa-square" v-bind:style="{ color: colors51 }"></i>
+  <br>
+  
+  <i id="s02" class="fas fa-square " v-bind:style="{ color: colors02 }"></i>
+  <i id="s12" class="fas fa-square" v-bind:style="{ color: colors12 }"></i>
+  <i id="s22" class="fas fa-square" v-bind:style="{ color: colors22 }"></i>
+  <i id="s32" class="fas fa-square " v-bind:style="{ color: colors32 }"></i>
+  <i id="s42" class="fas fa-square" v-bind:style="{ color: colors42 }"></i>
+  <i id="s52" class="fas fa-square" v-bind:style="{ color: colors52 }"></i>
+  <br>
+  
+  <i id="s03" class="fas fa-square " v-bind:style="{ color: colors03 }"></i>
+  <i id="s13" class="fas fa-square" v-bind:style="{ color: colors13 }"></i>
+  <i id="s23" class="fas fa-square" v-bind:style="{ color: colors23 }"></i>
+  <i id="s33" class="fas fa-square " v-bind:style="{ color: colors33 }"></i>
+  <i id="s43" class="fas fa-square" v-bind:style="{ color: colors43 }"></i>
+  <i id="s53" class="fas fa-square" v-bind:style="{ color: colors53 }"></i>
+  <br>
+  
+  <i id="s04" class="fas fa-square " v-bind:style="{ color: colors04 }"></i>
+  <i id="s14" class="fas fa-square" v-bind:style="{ color: colors14 }"></i>
+  <i id="s24" class="fas fa-square" v-bind:style="{ color: colors24 }"></i>
+  <i id="s34" class="fas fa-square " v-bind:style="{ color: colors34 }"></i>
+  <i id="s44" class="fas fa-square" v-bind:style="{ color: colors44 }"></i>
+  <i id="s54" class="fas fa-square" v-bind:style="{ color: colors54 }"></i>
+  <br>
+  
+  <i id="s05" class="fas fa-square " v-bind:style="{ color: colors05 }"></i>
+  <i id="s15" class="fas fa-square" v-bind:style="{ color: colors15 }"></i>
+  <i id="s25" class="fas fa-square" v-bind:style="{ color: colors25 }"></i>
+  <i id="s35" class="fas fa-square " v-bind:style="{ color: colors35 }"></i>
+  <i id="s45" class="fas fa-square" v-bind:style="{ color: colors45 }"></i>
+  <i id="s55" class="fas fa-square" v-bind:style="{ color: colors55 }"></i>
+  
+  
+  
+  
+  </div>
+	{{side}}
+  <button id="restart"v-on:click="xaxis = 0; yaxis =0; score = 0; pink =0; messagex = ''"><i class="far fa-circle"></i> Restart</button>
+  <div class="dpad">
+  <button id="up" v-on:click="yaxis -= 1"><i class="fas fa-arrow-up"></i></button>
+  <br>
+  <button id= "left"v-on:click="xaxis -= 1"><i class="fas fa-arrow-left"></i></button>
+  <button><i class="far fa-circle"></i></button>
+  <button id="right" v-on:click="xaxis += 1"><i class="fas fa-arrow-right"></i></button>
+   <br>
+   <button id="down" v-on:click="yaxis += 1"><i class="fas fa-arrow-down"></i></button>
+   </div>
+
+   
+  </div>
+ 
+  <div class="stuff">
+  
+  <p>Welcome to Super Box Boy! The classic game where BoxBoy tries to save his missing girlfriend. 
+  Move BoxBoy around the screen in four different directions to make his way to BoxGirl. BoxBoy
+  can be kinda clumsy, so it will take a few levels before he gets his girlfriend back. Good Luck! 
+  </p>
+  <div class="message">
+    <p>{{message}}
+  </p>
+  </div>
+  </div>
+  
+  </div>
+
+
+  <footer>
+	<a href="https://github.com/BYU-CS260-Winter-2018/lab-1-NathanaelSmith">GitHub</a>
+</footer>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<audio autoplay>
+  <source src="music.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+</html>
